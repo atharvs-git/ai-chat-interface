@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background-color: #0a0a0a;
+            color: #e0e0e0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+        h1 {
+            margin-bottom: 20px;
+            color: #4f9eff;
+        }
+        #chatbox {
+            width: 700px;
+            height: 500px;
+            background: #1a1a1a;
+            border-radius: 12px;
+            padding: 20px;
+            overflow-y: auto;
+            margin-bottom: 20px;
+        }
+        .message {
+            margin-bottom: 15px;
+            padding: 10px 15px;
+            border-radius: 8px;
+            max-width: 80%;
+            line-height: 1.6;
+        }
+        .user {
+            background: #4f9eff;
+            color: white;
+            margin-left: auto;
+            text-align: right;
+        }
+        .ai {
+            background: #2a2a2a;
+            color: #e0e0e0;
+        }
+        #inputArea {
+            display: flex;
+            gap: 10px;
+            width: 700px;
+        }
+        #userInput {
+            flex: 1;
+            padding: 12px;
+            border-radius: 8px;
+            border: none;
+            font-size: 16px;
+            background: #1a1a1a;
+            color: white;
+        }
+        button {
+            padding: 12px 24px;
+            background: #4f9eff;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <h1>AI Chat</h1>
+    <div id="chatbox"></div>
+    <div id="inputArea">
+        <input type="text" id="userInput" placeholder="Type your message...">
+        <button onclick="sendMessage()">Send</button>
+    </div>
+<script src="script.js"></script>
+</body>
+</html>
